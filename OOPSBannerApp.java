@@ -1,16 +1,24 @@
 /**
- * OOPSBannerApp UC1 – Print OOPS
+ * OOPSBannerApp UC2 – Banner Display Application
  *
- * This class demonstrates a simple Java application
- * that prints the literal text "OOPS" to the console.
+ * Displays the word "OOPS" in a large banner format
+ * using spaces and asterisks.
  *
  * @author Gitika Jain
- * @version 1.0
+ * @version 2.0
  */
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
-        System.out.println("OOPS");
+
+        System.out.println(" ***   ***  *****  ***** ");
+        System.out.println(" *  * *  *  *   *  *     ");
+        System.out.println(" *  * *  *  *   *  *     ");
+        System.out.println(" *  * *  *  *****  ***** ");
+        System.out.println(" *  * *  *  *          *  ");
+        System.out.println(" *  * *  *  *          *  ");
+        System.out.println(" ***   ***  *      ***** ");
+
     }
 }
 
