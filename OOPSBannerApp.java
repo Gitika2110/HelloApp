@@ -1,0 +1,16 @@
+/**
+ * OOPSBannerApp UC1 – Print OOPS
+ *
+ * This class demonstrates a simple Java application
+ * that prints the literal text "OOPS" to the console.
+ *
+ * @author Gitika Jain
+ * @version 1.0
+ */
+public class OOPSBannerApp {
+
+    public static void main(String[] args) {
+        System.out.println("OOPS");
+    }
+}
+
