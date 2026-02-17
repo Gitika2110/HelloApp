@@ -1,21 +1,25 @@
 /**
- * OOPSBannerApp UC3 - OOPS Banner using String.join()
- *
- * Prints the word OOPS in banner format using String.join()
- * instead of string concatenation.
- *
- * @author Gitika
- * @version 3.0
+ * OOPSBannerApp - UC4
+ * Render OOPS as Banner using String Array and Loop
  */
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        System.out.println(String.join("", " ***** ", " ***** ", " ***** ", " ***** "));
-        System.out.println(String.join("", " *   * ", " *   * ", " *   * ", " *     "));
-        System.out.println(String.join("", " *   * ", " *   * ", " ***** ", " ***** "));
-        System.out.println(String.join("", " *   * ", " *   * ", " *     ", "     * "));
-        System.out.println(String.join("", " *   * ", " *   * ", " *     ", "     * "));
-        System.out.println(String.join("", " ***** ", " ***** ", " *     ", " ***** "));
+        String[] banner = {
+
+            String.join(" ", " ***** ", " ***** ", " ***** ", " ***** "),
+            String.join(" ", "*     *", "*     *", "*     *", "*      "),
+            String.join(" ", "*     *", "*     *", " ***** ", " ***** "),
+            String.join(" ", "*     *", "*     *", "*      ", "      *"),
+            String.join(" ", "*     *", "*     *", "*      ", "      *"),
+            String.join(" ", "*     *", "*     *", "*      ", "*     *"),
+            String.join(" ", " ***** ", " ***** ", "*      ", " ***** ")
+        };
+
+        for (String line : banner) {
+            System.out.println(line);
+        }
     }
 }
+
