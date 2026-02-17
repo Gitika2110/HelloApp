@@ -1,16 +1,21 @@
 /**
- * OOPSBannerApp UC1 – Print OOPS
+ * OOPSBannerApp UC3 - OOPS Banner using String.join()
  *
- * This class demonstrates a simple Java application
- * that prints the literal text "OOPS" to the console.
+ * Prints the word OOPS in banner format using String.join()
+ * instead of string concatenation.
  *
- * @author Gitika Jain
- * @version 1.0
+ * @author Gitika
+ * @version 3.0
  */
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
-        System.out.println("OOPS");
+
+        System.out.println(String.join("", " ***** ", " ***** ", " ***** ", " ***** "));
+        System.out.println(String.join("", " *   * ", " *   * ", " *   * ", " *     "));
+        System.out.println(String.join("", " *   * ", " *   * ", " ***** ", " ***** "));
+        System.out.println(String.join("", " *   * ", " *   * ", " *     ", "     * "));
+        System.out.println(String.join("", " *   * ", " *   * ", " *     ", "     * "));
+        System.out.println(String.join("", " ***** ", " ***** ", " *     ", " ***** "));
     }
 }
-
