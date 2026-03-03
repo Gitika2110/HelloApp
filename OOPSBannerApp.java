@@ -1,30 +1,33 @@
-/**
- * OOPSBannerApp - UC6
- * Static Helper Methods for O, P, S
- */
+import java.util.HashMap;
+import java.util.Map;
 
 public class OOPSBannerApp {
 
-    public static void main(String[] args) {
+    // Static Inner Class
+    static class CharacterPatternMap {
 
-        String[] o = buildO();
-        String[] p = buildP();
-        String[] s = buildS();
+        private final char character;
+        private final String[] pattern;
 
-        String[] banner = new String[7];
-
-        for (int i = 0; i < 7; i++) {
-            banner[i] = String.join(" ", o[i], o[i], p[i], s[i]);
+        public CharacterPatternMap(char character, String[] pattern) {
+            this.character = character;
+            this.pattern = pattern;
         }
 
-        for (String line : banner) {
-            System.out.println(line);
+        public char getCharacter() {
+            return character;
+        }
+
+        public String[] getPattern() {
+            return pattern;
         }
     }
 
-    // Build letter O
-    public static String[] buildO() {
-        return new String[]{
+    public static void main(String[] args) {
+
+        Map<Character, CharacterPatternMap> patternMap = new HashMap<>();
+
+        patternMap.put('O', new CharacterPatternMap('O', new String[]{
                 " ***** ",
                 "*     *",
                 "*     *",
@@ -32,25 +35,19 @@ public class OOPSBannerApp {
                 "*     *",
                 "*     *",
                 " ***** "
-        };
-    }
+        }));
 
-    // Build letter P
-    public static String[] buildP() {
-        return new String[]{
-                " ***** ",
+        patternMap.put('P', new CharacterPatternMap('P', new String[]{
+                "****** ",
                 "*     *",
                 "*     *",
-                " ***** ",
+                "****** ",
                 "*      ",
                 "*      ",
                 "*      "
-        };
-    }
+        }));
 
-    // Build letter S
-    public static String[] buildS() {
-        return new String[]{
+        patternMap.put('S', new CharacterPatternMap('S', new String[]{
                 " ***** ",
                 "*      ",
                 "*      ",
@@ -58,6 +55,20 @@ public class OOPSBannerApp {
                 "      *",
                 "      *",
                 " ***** "
-        };
+        }));
+
+        String word = "OOPS";
+
+        for (int row = 0; row < 7; row++) {
+
+            StringBuilder line = new StringBuilder();
+
+            for (char c : word.toCharArray()) {
+                line.append(patternMap.get(c).getPattern()[row]);
+                line.append("   "); // spacing between letters
+            }
+
+            System.out.println(line);
+        }
     }
 }
